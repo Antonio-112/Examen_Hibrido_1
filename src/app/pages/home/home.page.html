@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calculadora de Perímetro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Figura Geométrica</ion-label>
+    <ion-select placeholder="Selecciona" [(ngModel)]="figuraSeleccionada">
+      <ion-select-option value="circulo">Círculo</ion-select-option>
+      <ion-select-option value="triangulo">Triángulo Escaleno</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngIf="figuraSeleccionada === 'circulo'">
+    <app-circulo></app-circulo>
+  </div>
+  <div *ngIf="figuraSeleccionada === 'triangulo'">
+    <app-triangulo></app-triangulo>
+  </div>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Shape Selector
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Select a shape</ion-label>
+    <ion-select [(ngModel)]="selectedShape">
+      <ion-select-option value="circle">Circle</ion-select-option>
+      <ion-select-option value="triangle">Triangle</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngIf="selectedShape === 'circle'">
+    <app-circle></app-circle>
+  </div>
+  
+  <div *ngIf="selectedShape === 'triangle'">
+    <app-triangle></app-triangle>
+  </div>
+</ion-content>
